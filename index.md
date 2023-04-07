@@ -1,7 +1,7 @@
-# Tutorial for Incoming 15L Students 
+# Tutorial for Incoming 15L Students (Windows User)
 
 
-## Installing VSCode (for Windows)
+## Installing VSCode 
 ---
 * Go to this [link](https://code.visualstudio.com/download) to download vscode. Let the settings be default. 
 * Open VSCode and you should see something like this: ![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/Screenshot%202023-04-06%20193104.png?raw=true) 
@@ -12,4 +12,6 @@
 
 ## Remotely Connecting
 ---
+* If you don't have 'git' installed, go to this [link](https://git-scm.com/download/win) to download it 
+* Open VScode, then 'ctrl + `' to open new terminal. Then 'ctrl+shift+p' and type select default profile. 
 * 
