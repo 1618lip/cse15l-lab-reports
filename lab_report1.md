@@ -35,9 +35,9 @@ Some commands to try out:
 * etc...
 > The `exit` command logs you out of the remote server.
 </br> 
-Here is the example commands and their outputs _(in the remote server)_
+* Here is the example commands and their outputs (in the remote server): 
 ![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/Screenshot%202023-04-07%20080156.png?raw=true)
-</br>
+
 
 
 
