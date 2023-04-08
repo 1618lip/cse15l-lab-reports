@@ -1,5 +1,6 @@
 
 # LAB REPORT 1: Tutorial for Incoming 15L Students (Windows User)
+## Created by Philip Pincencia
 
 
 ## Installing VSCode 
