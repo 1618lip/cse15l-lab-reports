@@ -38,7 +38,7 @@ Some commands to try out:
 * Here is the example commands and their outputs (in the remote server):![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/Screenshot%202023-04-07%20080156.png?raw=true)
 
 ---
-* That's it. Feel free to explore more!
+## That's it. Feel free to explore more!
 
 
 
