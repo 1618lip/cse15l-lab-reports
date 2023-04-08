@@ -1,4 +1,5 @@
-# Tutorial for Incoming 15L Students (Windows User)
+
+# LAB REPORT 1: Tutorial for Incoming 15L Students (Windows User)
 
 
 ## Installing VSCode 
@@ -35,5 +36,8 @@ Some commands to try out:
 > The `exit` command logs you out of the remote server.
 </br> 
 Here is the example commands and their outputs _(in the remote server)_
-![Image]()
+![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/Screenshot%202023-04-07%20080156.png?raw=true)
+</br>
+
+
 
