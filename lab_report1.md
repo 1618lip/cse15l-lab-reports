@@ -29,8 +29,9 @@
 ## Trying Some Commands
 ---
 Some commands to try out: 
-* `pwd`
-* `cd ~`, `cd`
+* `pwd`  (prints the current working directory path, starting from the root `/`)
+* `cd ~`  ()
+* `cd` 
 * `ls -lat`, `ls -a`, `ls <directory>`
 * `exit` 
 * etc...
