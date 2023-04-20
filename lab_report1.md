@@ -29,13 +29,14 @@
 ## Trying Some Commands
 ---
 Some commands to try out: 
-* `pwd`  (prints the current working directory path, starting from the root `/`)
-* `cd ~`  ()
-* `cd` 
-* `ls -lat`, `ls -a`, `ls <directory>`
-* `exit` 
+* `pwd`     (prints the current working directory path, starting from the root `/`)
+* `cd ~`  or  `cd`     (changes back to the default working directory) 
+* `ls -lat`     (displays all files and directories in the current directory, including hidden files, in a long format)
+* `ls -a`     (just like `ls -lat` but less information displayed)
+* `ls <directory>`     (displays all files and directories in the specified directory)
+* `exit`     (logs you out of the remote server) 
 * etc...
-> The `exit` command logs you out of the remote server.
+> You can use `Ctrl + C` as an alternative to `exit`
 
 * Here is the example commands and their outputs (in the remote server):![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/Screenshot%202023-04-07%20080156.png?raw=true)
 
