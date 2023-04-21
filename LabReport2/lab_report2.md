@@ -4,11 +4,14 @@
 
 ## Part 1
 
-* ```StringServer``` Code
+Code for  ```StringServer``` 
 
-![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/LabReport2/LabRep2_Images/StringServer_Code.png?raw=true)
-* 
+  ![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/LabReport2/LabRep2_Images/StringServer_Code.png?raw=true)
+<br>
+<br>
+First use of  ```/add-message
 
+  ![Image}()
 ## Part 2
 
 
