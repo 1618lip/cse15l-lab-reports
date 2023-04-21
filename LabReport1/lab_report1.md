@@ -38,7 +38,7 @@ Some commands to try out:
 * etc...
 > You can use `Ctrl + C` as an alternative to `exit`
 
-* Here is the example commands and their outputs (in the remote server):![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/Screenshot%202023-04-07%20080156.png?raw=true)
+* Here is the example commands and their outputs (in the remote server):![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/LabReport1/LabRep1_Images/tryCommands.png?raw=true)
 
 ---
 ## That's it. Feel free to explore more!
