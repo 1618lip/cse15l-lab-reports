@@ -63,6 +63,49 @@ Code for  ```StringServer```
   }
 ```
 <br/>
+
 **Symptoms:**
+![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/LabReport2/LabRep2_Images/JUnit%20Tests.png?raw=true)
+<br>
+**Bug Change**
+* Before: 
+```
+static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for (double num: arr) {
+      if (num != lowest) { sum += num; }
+    }
+    return sum / (arr.length - 1);
+  }
+```
+* After: 
+```
+static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    // vvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+    boolean flag = false;
+    for(double num: arr) {
+      if(num == lowest && !flag) {
+        flag = true;
+      }
+      else {
+        sum += num;
+      }
+    }
+    // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    return sum / (arr.length - 1);
+  }
+```
+
 
 ## Part 3
