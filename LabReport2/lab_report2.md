@@ -46,6 +46,23 @@ Code for  ```StringServer```
 ### Chosen Method: ```static double averageWithoutLowest(double[] arr)```
 
 **Failure-inducing Input:**
-``` ```
+```
+@Test
+  public void testaverageWithoutLowestNotPass() {
+    double getMean = ArrayExamples.averageWithoutLowest(new double[]{1.0, 1.0, 3.0, 3.0});
+    assertEquals(3, getMean, 0.001); // actual = 2.3333333333333335
+  }
+```
+<br/>
+**Non Failure-inducing Input:**
+```
+@Test
+  public void testaverageWithoutLowestPass() {
+    double getMean = ArrayExamples.averageWithoutLowest(new double[]{1.0, 2.0, 3.0, 4.0});
+    assertEquals(3, getMean, 0.001);
+  }
+```
+<br/>
+**Symptoms:**
 
 ## Part 3
