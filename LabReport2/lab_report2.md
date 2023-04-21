@@ -49,11 +49,11 @@ Code for  ```StringServer```
 ```
 @Test
   public void testaverageWithoutLowestNotPass() {
-    double getMean = ArrayExamples.averageWithoutLowest(new double[]{1.0, 1.0, 3.0, 3.0});
-    assertEquals(3, getMean, 0.001); // actual = 2.3333333333333335
+    double getMean = ArrayExamples.averageWithoutLowest(new double[]{1.0, 1.0, 3.0, 5.0});
+    assertEquals(3, getMean, 0.000); // actual = 2.6666666666666665
   }
 ```
-<br/>
+
 **Non Failure-inducing Input:**
 ```
 @Test
@@ -62,7 +62,7 @@ Code for  ```StringServer```
     assertEquals(3, getMean, 0.001);
   }
 ```
-<br/>
+
 
 **Symptoms:**
 ![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/LabReport2/LabRep2_Images/JUnit%20Tests.png?raw=true)
@@ -106,6 +106,7 @@ static double averageWithoutLowest(double[] arr) {
     return sum / (arr.length - 1);
   }
 ```
-
+Before the fix, if they are multiple lowest ```double```, we are ignoring all of them, however the number of ```double``` is still ```arr.length-1```, which is not really the definition of *mean*. The fix is introducing an indicator that once we found the lowest num in ```arr```, we are ignoring that one and then adding up all ```num``` until the end of ```arr```. That is achieved by using ```boolean flag = false;```, which will be changed to ```true``` once we find the lowest.  
 
 ## Part 3
+I found making my own web servers very cool. I thought it requires some special program and machinery to actually run one. Turns out Java can do that as well. Although I have yet to understand how to make the code for creating the server itself, I know how to modify it for a specific purpose. Especially seeing that changing the urls can do a lot of different stuffs. 
