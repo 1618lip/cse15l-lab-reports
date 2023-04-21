@@ -42,7 +42,10 @@ Code for  ```StringServer```
 
 ---
 
-## Part 2
-### Chosen Bug: 
+## Part 2: Bugs
+### Chosen Method: ```static double averageWithoutLowest(double[] arr)```
+
+**Failure-inducing Input:**
+``` ```
 
 ## Part 3
