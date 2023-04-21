@@ -5,7 +5,8 @@
 ## Part 1
 
 * ```StringServer``` Code
-![Image]()
+
+![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/LabReport2/LabRep2_Images/StringServer_Code.png?raw=true)
 * 
 
 ## Part 2
