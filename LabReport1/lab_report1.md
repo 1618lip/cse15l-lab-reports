@@ -22,7 +22,7 @@
 * To set up your password, go to this [link](https://sdacs.ucsd.edu/~icc/index.php) and follow this [tutorial](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit) to set it up correctly. After changing, wait for about 15 minutes.
 * Then, type your password
 > When you type your password, it will not show up! just like when you type password you'll see it hidden. 
-* If done correctly, you should see this: ![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/Screenshot%202023-04-07%20075258.png?raw=true)
+* If done correctly, you should see this: ![Image](https://github.com/1618lip/cse15l-lab-reports/blob/main/LabReport1/LabRep1_Images/sshLogin.png?raw=true)
 </br>
 </br>
 
