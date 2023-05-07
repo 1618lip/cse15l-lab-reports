@@ -139,6 +139,24 @@
   This could help someone quickly identify events or incidents that occurred at specific times, which could be important for analyzing the events described     in the report. 
 * **Source: use ```man grep```**
 
-#### Example 3.2: ```grep -E ```
+#### Example 3.2: ```grep -E '\w{15,}' ./technical/911report/chapter-7.txt```
+* **Command & Output:**
+  ```
+  Philip@Golden-lip MINGW64 ~/stringsearch-data (main)
+  $ grep -E '\w{15,}' ./technical/911report/chapter-7.txt
+                holding extremist beliefs who have been the subject of counterterrorism
+                transcontinental leg, each operative flew on the same type of aircraft he would
+                nuclear facility he had seen during familiarization flights near New York-a target
+                busy, as revealed by a set of contemporaneous Atta- Binalshibh communications that
+                757), and on transcontinental flights that connected to Las Vegas. This time,
+                counterproductive. It might draw the Americans into the war against them, just when
+  ```
+* **What is it doing?**
+  Searches for lines that has words with 15 characters or more
+* **Why useful?**
+  Useful when you want to avoid long words that might make reading harder. 
+* **Source: ```man grep```**
+
+---
 ### 4. ```grep --max-count=<integer> <pattern> <path-to-file>```
 > 
