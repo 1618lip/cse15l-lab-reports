@@ -118,12 +118,13 @@
   It searches for the pattern "list" in the file, which then pipes the output to an `awk` command that extracts the line numbers and the matching lines and concatenates them together with a space between them. And then prints it out with `cat` command. 
 * **Why useful?**
   Useful for attaching line numbers to lines that have that specific pattern, which I've seen a lot in my English Reading Assignments. So, it is useful for creating Reading Assignments. 
+* **Source: use ChatGPT**
   
 ---
 ### 3. ```grep -E <pattern> <path-to-file>```
 > `-E` option tells us that `grep` interprets `<PATTERNS>` as extended regular expressions (EREs)
 
-#### Example 3.1: ```grep -E '^[aeiou]*$' ./technical/plos/```
+#### Example 3.1: ```grep -E ' 6:[0-59]{2}' ./technical/911report/chapter-1.txt```
 * **Command & Output:**
   ```
   Philip@Golden-lip MINGW64 ~/stringsearch-data (main)
@@ -133,7 +134,11 @@
     Between 6:45 and 7:40, Atta and Omari, along with Satam al Suqami, Wail al Shehri, and Waleed al Shehri, checked in and boarded American Airlines Flight      11, bound for Los Angeles. The flight was scheduled to depart at 7:45.
   ```
 * **What is it doing?**
+  Returns all lines that contains a two-digit number between 60 and 59, preceded by the character "6:". In other words, all lines that has the time format `6:##`. 
 * **Why useful?**
+  This could help someone quickly identify events or incidents that occurred at specific times, which could be important for analyzing the events described     in the report. 
+* **Source: use ```man grep```**
+
 #### Example 3.2: ```grep -E ```
 ### 4. ```grep --max-count=<integer> <pattern> <path-to-file>```
 > 
