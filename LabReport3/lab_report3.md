@@ -159,4 +159,37 @@
 
 ---
 ### 4. ```grep --max-count=<integer> <pattern> <path-to-file>```
-> 
+> ```--max-count=<integer>``` means it will return at most ```<integer>``` number of matches
+  
+#### Example 4.1: ```grep --max-count=2 'example' ./technical/911report/preface.txt```
+* **Command & Output:**
+  ```
+  Philip@Golden-lip MINGW64 ~/stringsearch-data (main)
+  $ grep --max-count=3 'error' ./technical/911report/preface.txt
+                Commission on Terrorist Attacks Upon the United States (Public Law 107-306, November
+                relating to the terrorist attacks of September 11, 2001," including those relating
+                and border control, the flow of assets to terrorist organizations, commercial
+  ```
+* **What is it doing?**
+  Returns a maximum of 3 lines that contains the pattern 'error', even though there are more lines (there are actually 4 lines)
+* **Why useful?**
+  Useful when searching for a pattern that appears frequently in a file, but you only care about the first few. Or, you want to fix each error little by little without being overwhelmed by the number of errors printed to the command line. 
+* **Source: use ```man grep```**
+
+#### Example 4.2: ```grep -E '\w{15,}' ./technical/911report/chapter-7.txt```
+* **Command & Output:**
+  ```
+  Philip@Golden-lip MINGW64 ~/stringsearch-data (main)
+  $ grep -E '\w{15,}' ./technical/911report/chapter-7.txt
+                holding extremist beliefs who have been the subject of counterterrorism
+                transcontinental leg, each operative flew on the same type of aircraft he would
+                nuclear facility he had seen during familiarization flights near New York-a target
+                busy, as revealed by a set of contemporaneous Atta- Binalshibh communications that
+                757), and on transcontinental flights that connected to Las Vegas. This time,
+                counterproductive. It might draw the Americans into the war against them, just when
+  ```
+* **What is it doing?**
+  Searches for lines that has words with 15 characters or more
+* **Why useful?**
+  Useful when you want to avoid long words that might make reading harder. 
+* **Source: ```man grep```**
