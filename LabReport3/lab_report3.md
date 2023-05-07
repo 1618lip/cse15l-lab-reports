@@ -4,7 +4,7 @@
 ### 1. ```grep -i <pattern> <path-to-file>```
 > `-i` option tells us that `grep` will ignore case distinctions in patterns and input data
 
-#### Example 1: ```$ grep -i 'this' ./technical/911report/preface.txt```
+#### Example 1.1: ```$ grep -i 'this' ./technical/911report/preface.txt```
 * **Command & Output:** 
   ```
   Philip@Golden-lip MINGW64 ~/stringsearch-data (main)
@@ -32,7 +32,7 @@
 * **Why useful?**
   Sometimes you just want to find the words itself. In code, you can use this option to check if all variables are in the same case. If we didn't use this option, the ones that are in the wrong case will not be exposed. So, for debugging purposes, this is very useful. 
 * **Source: [https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)**
-#### Example 2: ```grep -i '[zq]' ./technical/911report/preface.txt```
+#### Example 1.2: ```grep -i '[zq]' ./technical/911report/preface.txt```
 * **Command & Output:**
   ```
   Philip@Golden-lip MINGW64 ~/stringsearch-data (main)
@@ -56,21 +56,84 @@
 
 ---
 ### 2. ```grep -n  <pattern> <path-to-file>```
-> `-n` option tells us the line number in the file of the given search string
+> `-n` option tells us the line numbers in the file of the given search string
 
-#### Example 1: ```grep -n  'given' ucsd-cse15l-s23/stringsearch-data/technical/biomed/1471-2105-3-2.txt```
-* Command & Output: 
-* What is it doing? 
-* Why useful?
+#### Example 2.1: ```grep -n  'very' ./technical/biomed/1471-2105-3-2.txt```
+* **Command & Output:** 
+  ```
+  Philip@Golden-lip MINGW64 ~/stringsearch-data (main)
+  $ grep -n "very" ./technical/biomed/1471-2105-3-2.txt
+  35:        significant findings was the discovery of the third kingdom
+  60:        secondary structure for every other 5S rRNA sequence [ 12
+  122:        can require very large, phylogenetically and structurally
+  170:            determined very early in this methodology that the
+  390:            and 23S rRNAs (see above) from this very large number
+  402:            tabulating the presence or absence of every proposed
+  405:            and 23S [ 19 ] rRNA models. Every base pair in each of
+  425:            for 16S and 23S rRNA are very similar to one another.
+  431:            This analysis produced two very large tables with
+  522:            the reference sequence, for every RNA in this
+  814:            sequences that are very similar, the proper
+  881:            RNA sequences. Our current RNA data sets contain a very
+  887:            RNA sequences are very similar to at least one sequence
+  939:            that are very closely related to the organisms for
+  1428:            complete information for every intron within a
+  1675:            field could be very useful to identify organisms and
+  1909:            This analysis, as mentioned earlier, is very accurate:
+  1982:            adenosines for every A that is paired), and lowest for
+  ```
+* **What is it doing?**
+  Find all lines that contains the string "very" and tell us the line number for each line
+* **Why useful?**
+  Researching text: use grep -n to quickly search for a specific keyword or phrase in all the files, and see where the matches occur along with their line numbers. This can help you get a better understanding of the context of the matches in the files.
+* **Source: Use ```man grep```** 
+#### Example 2.2: ```grep -n 'list' ./technical/biomed/1471-2105-3-2.txt  | awk '{print $1, substr($0, index($0,$2))}' > output.txt```
+* **Command & Output:** 
+  ```
+  Philip@Golden-lip MINGW64 ~/stringsearch-data (main)
+  $ grep -n 'list' ./technical/biomed/1471-2105-3-2.txt  | awk '{print $1, substr($0, index($0,$2))}' > output.txt
 
-#### Example 2: ```grep -n '^[aeiou]*$' ucsd-cse15l-s23/stringsearch-data/technical/911report/preface.txt```
-* Command & Output: 
-* What is it doing? 
-* Why useful?
-
+  Philip@Golden-lip MINGW64 ~/stringsearch-data (main)
+  $ cat output.txt
+  628: list of base pairs in the left frame is red in the C
+  789: web-formatted list of those sequences. The lists, for
+  1035: lists for each of those five phylogenetic/cell location
+  1067: or modified recently are listed and available from
+  1072: (black text). Diagrams are listed alphabetically by
+  1089: selections are made, a list of the structure diagrams
+  1114: each alignment, there is a corresponding list of
+  1116: information about the sequences (see conservation list
+  1139: position number listed and the following position (
+  1141: position 516 and 517 are listed as 516). rRNA Introns
+  1146: below and H-3E.1). The list of all publicly available
+  1528: (for list- and button-driven fields) or, for text input
+  1584: "coli" in this field will list all organism names that
+  1650: etc. ) are listed when the
+  1779: listing that can be retrieved in a new window by
+  1781: listing also contains the known common names associated
+  1944: these fields are listed in Table 5. The system
+  1974: the structural elements listed (
+  ```
+* **What is it doing?** 
+  It searches for the pattern "list" in the file, which then pipes the output to an `awk` command that extracts the line numbers and the matching lines and concatenates them together with a space between them. And then prints it out with `cat` command. 
+* **Why useful?**
+  Useful for attaching line numbers to lines that have that specific pattern, which I've seen a lot in my English Reading Assignments. So, it is useful for creating Reading Assignments. 
+  
 ---
-### 3. ```grep -E 'A[0-9]{8}' <path-to-file>```
+### 3. ```grep -E <pattern> <path-to-file>```
 > `-E` option tells us that `grep` interprets `<PATTERNS>` as extended regular expressions (EREs)
 
+#### Example 3.1: ```grep -E '^[aeiou]*$' ./technical/plos/```
+* **Command & Output:**
+  ```
+  Philip@Golden-lip MINGW64 ~/stringsearch-data (main)
+  $ grep -E ' 6:[0-59]{2}' ./technical/911report/chapter-1.txt
+    Boston: American 11 and United 175. Atta and Omari boarded a 6:00 A.M. flight from Portland to Boston's Logan International Airport.
+    Atta and Omari arrived in Boston at 6:45. Seven minutes later, Atta apparently took a call from Marwan al Shehhi, a longtime colleague who was at another     terminal at Logan Airport. They spoke for three minutes.
+    Between 6:45 and 7:40, Atta and Omari, along with Satam al Suqami, Wail al Shehri, and Waleed al Shehri, checked in and boarded American Airlines Flight      11, bound for Los Angeles. The flight was scheduled to depart at 7:45.
+  ```
+* **What is it doing?**
+* **Why useful?**
+#### Example 3.2: ```grep -E ```
 ### 4. ```grep --max-count=<integer> <pattern> <path-to-file>```
 > 
