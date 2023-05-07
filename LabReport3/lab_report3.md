@@ -176,20 +176,16 @@
   Useful when searching for a pattern that appears frequently in a file, but you only care about the first few. Or, you want to fix each error little by little without being overwhelmed by the number of errors printed to the command line. 
 * **Source: use ```man grep```**
 
-#### Example 4.2: ```grep -E '\w{15,}' ./technical/911report/chapter-7.txt```
+#### Example 4.2: ```grep --max-count=1 'every' ./technical/911report/preface.txt | tail -n 1```
 * **Command & Output:**
   ```
   Philip@Golden-lip MINGW64 ~/stringsearch-data (main)
-  $ grep -E '\w{15,}' ./technical/911report/chapter-7.txt
-                holding extremist beliefs who have been the subject of counterterrorism
-                transcontinental leg, each operative flew on the same type of aircraft he would
-                nuclear facility he had seen during familiarization flights near New York-a target
-                busy, as revealed by a set of contemporaneous Atta- Binalshibh communications that
-                757), and on transcontinental flights that connected to Las Vegas. This time,
-                counterproductive. It might draw the Americans into the war against them, just when
+  $ grep --max-count=1 'every' ./technical/911report/preface.txt | tail -n 1
+                individuals in ten countries. This included nearly every senior official from the
   ```
 * **What is it doing?**
-  Searches for lines that has words with 15 characters or more
+  Searches for the the pattern 'every' in the file, return the first match (which will be the last match since grep searches from the beginning of the file), and then use the tail command to extract the last line of output, which will be the last occurrence of the pattern in the file.
 * **Why useful?**
-  Useful when you want to avoid long words that might make reading harder. 
-* **Source: ```man grep```**
+  Useful in situations where you only care about the last occurrence of a pattern, such as when monitoring log files or tracking changes in a file over time.
+* **Source: ChatGPT**
+---
