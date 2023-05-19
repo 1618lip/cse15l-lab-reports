@@ -4,18 +4,23 @@
 ### What to type? `ssh cs15lsp23oq@ieng6.ucsd.edu` &rarr; `<Enter>`
 > Note: No need to type in my password anymore I have generated SSH key for `ieng6`
 ![Image](https://cdn.discordapp.com/attachments/1099107413803679870/1109124762363498637/image.png)
+
 ---
+
 ## Step 2: Clone the fork
 ### What to type/press? `git clone` &rarr; `<space>` &rarr; `<ctrl> + v` &rarr; `<Enter>`
 > Use of `<ctrl> + v`: for copy-paste the **fork** of the repository from my Github account 
 ![Image](https://cdn.discordapp.com/attachments/1099107413803679870/1109125739485351936/image.png)
+
 ---
 
 ## Step 3: Run Test (Should fail)
 ### What to type? `bash test.sh` &rarr; `<Enter>`
 > The `test.sh` compiles and run `ListExamplesTests.java`
 ![Image](https://cdn.discordapp.com/attachments/1099107413803679870/1109126190561775687/image.png)
+
 ---
+
 ## Step 4: Edit the Code
 ### What to type/press: 
 * **Open Vim: `vim ListExamples.java` &rarr; `<Enter>`**
@@ -36,11 +41,15 @@
 > 
 > Press `<Esc>` to exit out of `insert` mode, then `:wq` to exit out of `vim` with saving the edits.
 ![Image](https://cdn.discordapp.com/attachments/1099107413803679870/1109131951148892311/image.png)
+
 ---
+
 ## Step 5: Run Test (Should pass)
 ![Image](https://cdn.discordapp.com/attachments/1099107413803679870/1109138025822310551/image.png)
 ### What to type: `<up><up>` &rarr; `<Enter>`
 > Press up arrow `<up> (&uarr;)` twice to get the `bash test.sh` command, then hit `<Enter>`.
+
+---
 
 ## Step 6: Commit & Push to GitHub
 ![Image](https://cdn.discordapp.com/attachments/1099107413803679870/1109137899808641084/image.png)
