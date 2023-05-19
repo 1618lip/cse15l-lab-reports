@@ -46,7 +46,7 @@
 ## Step 5: Run Test (Should pass)
 ![Image](https://cdn.discordapp.com/attachments/1099107413803679870/1109138025822310551/image.png)
 ### What to type: `<up><up>` &rarr; `<Enter>`
-> Press up arrow `<up> (&uarr;)` twice to get the `bash test.sh` command, then hit `<Enter>`.
+> Press up arrow `<up>` twice to get the `bash test.sh` command, then hit `<Enter>`.
 
 
 
