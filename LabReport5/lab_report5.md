@@ -182,3 +182,4 @@
 
 ---
 ## Part 2: Reflection
+> I really like this topic of building servers, which is why I chose the debugging scenario to be about servers & URLs. Vim is also cool because I like weird & wacky stuff, but hot take: Vim is better than writing a bash script. 
